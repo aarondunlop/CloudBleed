@@ -1,6 +1,10 @@
 This project is in response to the silly-named, but quite scary CloudFront CDN breach currently unfolding. While it is very possible that your data is secure and you are not affected the sites listed here: https://github.com/pirate/sites-using-cloudflare were verified to have exposed sensitive data including passwords, logins, personal information, etc.
 
-As always when something like this comes about, change your passwords. This one is difficult because CloudFront is a massive player in this space so many, many sites were affected. To do a quick sweep I exported my Chrome password file, then wrote this script to dump out anything I had affected. 
+As always when something like this comes about, change your passwords. This one is difficult because CloudFront is a massive player in this space so many, many sites were affected. Just because a site is on the list does not mean the sensitive parts of the site were, just because the sensitive parts were does not mean that *your* data was, etc. Still, this involves data that may still be cached/present, and it's worth the time to change your passwords if this affects you.
+
+And as always, a big plug for a good password management system. 1password and Lastpass have excellent apps as do many others.
+
+To do a quick sweep I exported my Chrome password file, then wrote this script to dump out anything I had affected. 
 
 To export Chrome passwords:
 
