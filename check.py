@@ -16,16 +16,15 @@ if not os.path.isfile(site_file):
         zf.extract('sites-using-cloudflare-master/sorted_unique_cf.txt', '/tmp/')
         os.rename('/tmp/sites-using-cloudflare-master/sorted_unique_cf.txt', '/tmp/list.csv')
 
-f = open(site_file, 'r')
-for line in f.readlines():
-    sites.append(line.rstrip())
+with open(site_file, 'r') as f:
+    for line in f.readlines():
+        sites.append(line.rstrip())
 f.close()
 
-f = open(password_file, 'r')
-for line in f.readlines():
-    newline=line.split(',')[0].replace('http://','').replace('www.', '').lower().rstrip()
-    pw_list.append(newline)
-
+with open(password_file, 'r') as f:
+    for line in f.readlines():
+        newline=line.split(',')[0].replace('http://','').replace('www.', '').lower().rstrip()
+        pw_list.append(newline)
 f.close()
 
 result=sorted(list(set(pw_list) & set(sites)))
