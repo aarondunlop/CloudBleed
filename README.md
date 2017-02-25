@@ -1,10 +1,10 @@
-This project is in response to the silly-named, but quite scary CloudFront CDN breach currently unfolding. While it is very possible that your data is secure and you are not affected the sites listed here: https://github.com/pirate/sites-using-cloudflare were verified to have exposed sensitive data including passwords, logins, personal information, etc.
+This project is in response to the silly-named, but scary CloudFront CDN issue currently unfolding. While it is very possible that your data is secure if you use a site on this list: https://github.com/pirate/sites-using-cloudflare a good chunk were verified to haave had sensitive data exposed - including passwords, logins, personal information, etc.
 
 As always when something like this comes about, change your passwords. This one is difficult because CloudFront is a massive player in this space so many, many sites were affected. Just because a site is on the list does not mean the sensitive parts of the site were, just because the sensitive parts were does not mean that *your* data was, etc. Still, this involves data that may still be cached/present, and it's worth the time to change your passwords if this affects you.
 
-And as always, a big plug for a good password management system. 1password and Lastpass have excellent apps as do many others.
+This is a good time to put in a big plug for a good password management system. Lastpass and 1password have excellent apps as do many others.
 
-To do a quick sweep I exported my Chrome password file, then wrote this script to dump out anything I had affected. 
+To do see what I needed to change I exported my Chrome password file, then wrote this script to dump out anything I had affected. 
 
 To export Chrome passwords:
 
@@ -22,4 +22,4 @@ Requirements:
 3. Existing /tmp/password.csv from the above steps.
 4. check.py from this project existing in /tmp/check.py
 
-Download check.py from here, and run it. It will download, unzip, and compare only the website name (with a little formatting) against the affected list. This password file should be *deleted* as soon as you are done, and if in doubt - change extra passwords. Don't trust that the master list is valid, or that my novice attempts to deal with this didn't miss something important.
+Download check.py from here, and run it. It will download, unzip, and compare only the website name (with a little formatting) against the affected list. This password file should be *deleted* as soon as you are done (the script will not do this for you), and if in doubt - change any credentials that may have been revealed. Don't trust that the master list is valid, or that my novice attempts to deal with this didn't miss something important.
